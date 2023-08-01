@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <input type="submit" name="fetch" value="fetch_data" onclick="fetch_data()">
+    <div id="result"></div>
+    <script>
+        function fetch_data(){
+            $.ajax({
+                url:'/gethello',
+                method:'GET',
+                success: function (data) {
+                    $('#result').text(data);
+                },
+            });
+        }
+    </script>
+</body>
+</html>
